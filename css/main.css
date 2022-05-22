@@ -14,7 +14,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-}
+   }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -27,25 +27,25 @@ html {
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
-}
+   }
 
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
-}
+   }
 
 /*
  * A better looking default horizontal rule
  */
 
 hr {
+    border-top: 1px solid #ccc;
+    border: 0;
     display: block;
     height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
-}
+   }
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -60,7 +60,7 @@ img,
 svg,
 video {
     vertical-align: middle;
-}
+   }
 
 /*
  * Remove default fieldset styles.
@@ -70,7 +70,7 @@ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
-}
+   }
 
 /*
  * Allow only vertical resizing of textareas.
@@ -78,18 +78,18 @@ fieldset {
 
 textarea {
     resize: vertical;
-}
+   }
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
     background: #ccc;
     color: #000;
+    margin: 0.2em 0;
     padding: 0.2em 0;
-}
+   }
 
 /* ==========================================================================
    Author's custom styles
@@ -99,42 +99,42 @@ textarea {
 html {
     background: url(../img/bkgd2.jpg) no-repeat center center fixed;
     background-size: cover;
-   /* set height to 100% - these are important for allowing content to vertically align */
-}
+    height: 100%;
+   }
 
 body {
-    /* set height to 100% - these are important for allowing content to vertically align */
-}
+    height: 100%;
+   }
 
 .wrapper {
-    /* set the display to flex and use the justify-content & align-items properties to center all child elements on the page */
-    margin: 0;
+    align-items: center;
+    display: flex;
     height: 100%;
+    justify-content: center;
+    margin: 0;
     width: 100%;
-}
+   }
 
 #content {
-    /* set the display to flex and use the justify-content & align-items properties to center the text within the div*/
+    align-items: center;
     background: #222;
     background:rgba(0,0,0,0.7);
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    font-size: 1.25em;
-    line-height: 1.5em;
     border-radius: 10px;
+    color: #fff;
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25em;
+    font-weight: 300;
+    height: 300px;
+    justify-content: center;
+    line-height: 1.5em;
     padding: 0px 30px;
     width: 300px;
-    height: 300px;
-}
+   }
 
 #content p span {
     font-family: 'Lora', sans-serif;
-}
-
-
-
-
+   }
 
 /* ==========================================================================
    Helper classes
@@ -146,7 +146,7 @@ body {
 
 .hidden {
     display: none !important;
-}
+   }
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -162,7 +162,7 @@ body {
     padding: 0;
     position: absolute;
     width: 1px;
-}
+   }
 
 /*
  * Extends the .visuallyhidden class to allow the element
@@ -178,7 +178,7 @@ body {
     overflow: visible;
     position: static;
     width: auto;
-}
+   }
 
 /*
  * Hide visually and from screen readers, but maintain layout
@@ -186,7 +186,7 @@ body {
 
 .invisible {
     visibility: hidden;
-}
+   }
 
 /*
  * Clearfix: contain floats
@@ -202,13 +202,15 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+    content: " ";
+    display: table;
+     /* 1 */
+     /* 2 */
+   }
 
 .clearfix:after {
     clear: both;
-}
+   }
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -217,15 +219,17 @@ body {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
+    
     /* Style adjustments for viewports that meet the condition */
-}
+   }
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
+    
     /* Style adjustments for high resolution devices */
-}
+   }
 
 /* ==========================================================================
    Print styles.
@@ -234,72 +238,76 @@ body {
    ========================================================================== */
 
 @media print {
+    a:visited {
+        text-decoration: underline;
+       }
+    http://css-discuss.incutio.com/wiki/Printing_Tables
+    javascript:"]:after {
+        content: "";
+       }
+    javascript:` pseudo protocol
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
+        color: #000 !important;
+        http://www.sanbeiji.com/archives/953 */
         text-shadow: none !important;
-    }
+        
+         /* Black prints faster:
+       }
 
     a,
-    a:visited {
-        text-decoration: underline;
-    }
-
     a[href]:after {
         content: " (" attr(href) ")";
-    }
+       }
 
     abbr[title]:after {
         content: " (" attr(title) ")";
-    }
+       }
 
     /*
      * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
+     * or use the `
      */
 
     a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+    a[href^="
 
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
-    }
+       }
 
     /*
      * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     * 
      */
 
     thead {
         display: table-header-group;
-    }
+       }
 
     tr,
     img {
         page-break-inside: avoid;
-    }
+       }
 
     img {
         max-width: 100% !important;
-    }
+       }
 
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
-    }
+       }
 
     h2,
     h3 {
         page-break-after: avoid;
-    }
-}
+       }
+   }
